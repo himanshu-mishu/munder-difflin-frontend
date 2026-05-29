@@ -1,0 +1,72 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout {
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1.75rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 200px;
+}
+
+/* Empty state */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: var(--bg3);
+  border: 1px dashed var(--border2);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--text3);
+}
+
+.emptyIcon {
+  margin-bottom: 1.25rem;
+  opacity: 0.5;
+}
+
+.emptyTitle {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text2);
+  margin-bottom: 0.5rem;
+}
+
+.emptyText {
+  font-size: 0.85rem;
+  color: var(--text3);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  /* Sidebar goes on top on mobile */
+  .app > div:last-child { order: -1; }
+}

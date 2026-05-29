@@ -1,0 +1,134 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  color: var(--amber);
+  text-transform: uppercase;
+}
+
+.hint {
+  margin-left: auto;
+  color: var(--text3);
+  font-size: 0.6rem;
+}
+
+.inputWrap {
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.inputWrap:focus-within {
+  border-color: var(--amber-dim);
+  box-shadow: 0 0 0 3px var(--amber-glow);
+}
+
+.textarea {
+  width: 100%;
+  padding: 1rem 1.1rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-size: 0.92rem;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  resize: none;
+  caret-color: var(--amber);
+}
+
+.textarea::placeholder { color: var(--text3); }
+.textarea:disabled { opacity: 0.5; }
+
+.bar {
+  padding: 0.6rem 0.8rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.suggestions {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.chip {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  color: var(--text2);
+  padding: 0.22rem 0.6rem;
+  font-size: 0.68rem;
+  border-radius: 20px;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.chip:hover:not(:disabled) {
+  background: var(--surface2);
+  color: var(--text);
+  border-color: var(--amber-dim);
+}
+
+.chip:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.sendBtn {
+  background: var(--amber);
+  color: var(--bg);
+  border: none;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.sendBtn:hover:not(:disabled) {
+  background: #f0b030;
+  transform: translateY(-1px);
+}
+
+.sendBtn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.sendBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.loadingDots {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.loadingDots span {
+  width: 5px;
+  height: 5px;
+  background: var(--bg);
+  border-radius: 50%;
+  animation: pulse 1.2s infinite;
+}
+
+.loadingDots span:nth-child(2) { animation-delay: 0.2s; }
+.loadingDots span:nth-child(3) { animation-delay: 0.4s; }

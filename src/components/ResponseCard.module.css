@@ -1,0 +1,204 @@
+.card {
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  overflow: hidden;
+  animation: fadeUp 0.3s ease;
+}
+
+.card.success  { border-left: 3px solid var(--green); }
+.card.rejected { border-left: 3px solid var(--red); }
+
+.cardHeader {
+  background: var(--surface);
+  padding: 0.55rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pipeline {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pTag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 0.12rem 0.5rem;
+  border-radius: 3px;
+  letter-spacing: 0.08em;
+}
+
+.pInv   { background: rgba(74,153,96,0.15);  color: var(--green); }
+.pQuote { background: rgba(58,120,184,0.15); color: var(--blue); }
+.pSales { background: rgba(232,160,32,0.15); color: var(--amber); }
+
+.arrow {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text3);
+}
+
+.dateTag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text3);
+}
+
+.statusBadge, .statusBadgeRed {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+}
+
+.statusBadge    { background: var(--green-bg); color: var(--green); }
+.statusBadgeRed { background: var(--red-bg);   color: var(--red); }
+
+.requestEcho {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.reqLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text3);
+  letter-spacing: 0.12em;
+  flex-shrink: 0;
+}
+
+.reqText {
+  font-size: 0.88rem;
+  color: var(--text2);
+  line-height: 1.4;
+}
+
+.sections {
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.section {
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.inv   { border-color: rgba(74,153,96,0.25); }
+.quote { border-color: rgba(58,120,184,0.25); }
+.sales { border-color: rgba(232,160,32,0.2); }
+
+.sectionHeader {
+  width: 100%;
+  background: var(--surface);
+  border: none;
+  padding: 0.5rem 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.inv .sectionHeader   { color: var(--green); background: var(--green-bg); }
+.quote .sectionHeader { color: var(--blue);  background: var(--blue-bg); }
+.sales .sectionHeader { color: var(--amber); background: rgba(232,160,32,0.05); }
+
+.sectionHeader:hover { filter: brightness(1.1); }
+
+.agentBadge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  flex: 1;
+}
+
+.invBadge   { color: var(--green); }
+.quoteBadge { color: var(--blue); }
+.salesBadge { color: var(--amber); }
+
+.chevron { margin-left: auto; }
+
+.sectionContent {
+  padding: 0.85rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.7;
+  color: var(--text2);
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+}
+
+.sectionContent.successContent {
+  background: var(--green-bg);
+  color: #7acc94;
+  border-top-color: rgba(74,153,96,0.2);
+}
+
+.sectionContent.rejectedContent {
+  background: var(--red-bg);
+  color: #e07060;
+  border-top-color: rgba(192,72,48,0.2);
+}
+
+.rawContent {
+  padding: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.7;
+  color: var(--text2);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Error card */
+.errorCard {
+  background: var(--red-bg);
+  border: 1px solid rgba(192,72,48,0.4);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--red);
+  animation: fadeUp 0.25s ease;
+}
+
+.errorTitle {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.2rem;
+}
+
+.errorMsg {
+  font-size: 0.82rem;
+  color: #e07060;
+  line-height: 1.5;
+}

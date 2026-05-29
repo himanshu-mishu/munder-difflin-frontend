@@ -1,0 +1,185 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cardHeader {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0.55rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  color: var(--amber);
+}
+
+.count {
+  margin-left: 0.25rem;
+  color: var(--text3);
+  font-size: 0.6rem;
+}
+
+.refreshBtn {
+  margin-left: auto;
+  background: none;
+  border: 1px solid var(--border2);
+  color: var(--text3);
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.refreshBtn:hover:not(:disabled) {
+  border-color: var(--amber-dim);
+  color: var(--amber);
+}
+
+.spin { animation: spinAnim 1s linear infinite; }
+
+@keyframes spinAnim { to { transform: rotate(360deg); } }
+
+.cardBody { padding: 0.85rem; }
+
+/* Metrics */
+.metricGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.metric {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0.7rem 0.8rem;
+}
+
+.metric.full { grid-column: span 2; }
+
+.metLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text3);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.metValue {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.metValue.amber { color: var(--amber); }
+.metValue.large { font-size: 1.15rem; color: var(--text); }
+
+/* Inventory list */
+.invList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.invItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.5rem;
+  background: var(--surface);
+  border-radius: 4px;
+}
+
+.invName {
+  flex: 1;
+  font-size: 0.75rem;
+  color: var(--text2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.invStock {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text3);
+  flex-shrink: 0;
+  min-width: 32px;
+  text-align: right;
+}
+
+.bar {
+  width: 36px;
+  height: 3px;
+  background: var(--border2);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.barFill {
+  height: 100%;
+  background: var(--green);
+  border-radius: 2px;
+  transition: width 0.6s ease;
+}
+
+/* Agent list */
+.agentList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.agentItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.agentDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.agentName {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.2rem;
+}
+
+.agentDesc {
+  font-size: 0.72rem;
+  color: var(--text3);
+  line-height: 1.4;
+}
+
+/* States */
+.loading { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text3); padding: 0.5rem 0; }
+.error   { font-family: var(--font-mono); font-size: 0.72rem; color: var(--red);   padding: 0.5rem 0; line-height: 1.5; }

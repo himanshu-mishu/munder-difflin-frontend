@@ -1,0 +1,128 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--amber);
+  text-shadow: 0 0 20px var(--amber-glow);
+}
+
+.logoSub {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text3);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.statusPill {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--green-bg);
+  border: 1px solid var(--green);
+  color: var(--green);
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+}
+
+.statusPill svg {
+  animation: pulse 2s infinite;
+}
+
+.datePicker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dateLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text3);
+  letter-spacing: 0.12em;
+}
+
+.dateInput {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  color: var(--text);
+  padding: 0.3rem 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.dateInput:focus {
+  border-color: var(--amber-dim);
+}
+
+.cashBadge {
+  background: var(--surface);
+  border: 1px solid var(--amber-dim);
+  padding: 0.3rem 0.9rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.cashLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text3);
+  letter-spacing: 0.12em;
+}
+
+.cashValue {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--amber);
+}
+
+.scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--amber), transparent);
+  opacity: 0.4;
+}
