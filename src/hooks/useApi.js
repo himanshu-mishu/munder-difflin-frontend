@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 
-const API = ''
+const API = import.meta.env.VITE_API_URL
 
 export function useApi() {
   const [loading, setLoading] = useState(false)
